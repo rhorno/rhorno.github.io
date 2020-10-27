@@ -1,3 +1,23 @@
+:root {
+    --color-grey-100: #e7e7e7;
+    --color-grey-300: #f3f3f3;
+    --color-grey-500: #999;
+    --color-white: #fff;
+    --color-black: #222;
+    --color-blue-100: #c8dff1;
+    --color-blue-300: #79a9ce;
+    --color-blue-500: #2fa3e6;
+    --font: 400 17px/1.6 "Lato", sans-serif;
+    --font-sm: 0.85rem;
+    --font-lg: 2rem;
+    --font-bold: 700;
+    --font-light: 300;
+    --container-width: 750px;
+    --paragraph-margin: 0.7rem;
+    --section-margin: 2.2rem;
+    --separator-margin: 2.4rem 0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,155 +25,220 @@
 }
 html {
     height: 100%;
+    font: var(--font);
 }
 
 body {
     min-height: 100%;
-    background: #eee;
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    color: #222;
-    font-size: 14px;
-    line-height: 26px;
-    padding-bottom: 50px;
+    background: var(--color-grey-300);
+    color: var(--color-black);
 }
 
-.container {
-    max-width: 700px;
-    background: #fff;
-    margin: 0px auto 0px;
-    box-shadow: 1px 1px 2px #dad7d7;
-    border-radius: 3px;
-    padding: 40px;
-    margin-top: 50px;
+h1,
+h2,
+h3 {
+    font-weight: var(--font-bold);
+    font-size: 1rem;
 }
 
-@media print {
-    .container {
-        box-shadow: 0 !important;
-    }
+h1,
+h2 {
+    letter-spacing: 1.3px;
 }
 
-.header {
-    margin-bottom: 30px;
+h1 {
+    font-size: var(--font-lg);
 }
 
-.header .full-name {
-    font-size: 40px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
+h2 {
+    color: var(--color-blue-500);
+    margin-bottom: 1.5rem;
 }
 
-.header .first-name {
-    font-weight: 700;
+ul {
+    list-style-type: none;
 }
 
-.header .last-name {
-    font-weight: 300;
+a {
+    text-decoration: none;
+    color: var(--color-blue-500);
 }
 
-.header .contact-info {
-    margin-bottom: 20px;
+p {
+    margin-bottom: var(--paragraph-margin);
 }
 
-.header .email,
-.header .phone {
-    color: #999;
-    font-weight: 300;
-}
-
-.header .separator {
-    height: 10px;
-    display: inline-block;
-    border-left: 2px solid #999;
-    margin: 0px 10px;
-}
-
-.header .position {
-    font-weight: bold;
-    display: inline-block;
-    margin-right: 10px;
+a:hover {
     text-decoration: underline;
 }
 
-.details {
-    line-height: 20px;
+main {
+    max-width: var(--container-width);
+    background: var(--color-white);
+    margin: 0 auto;
+    padding: 2.3rem;
 }
 
-.details .section {
+.contact__item {
+    display: inline-block;
+}
+
+.about {
+    display: flex;
+    width: 100%;
+    margin-bottom: var(--section-margin);
+    justify-content: center;
+    align-items: center;
+}
+
+.about :not(:last-child) {
+    margin-right: var(--section-margin);
+}
+
+.about__profile-image {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 5px solid var(--color-blue-100);
+    overflow: hidden;
+}
+
+.about__profile-image img {
+    width: 100%;
+}
+
+.font-bold {
+    font-weight: var(--font-bold);
+}
+
+.font-light {
+    font-weight: var(--font-light);
+}
+
+.font-sm {
+    font-size: var(--font-sm);
+}
+
+.text-grey {
+    color: var(--color-grey-500);
+}
+
+.text-right {
+    text-align: right;
+}
+
+.separator {
+    display: block;
+    width: 100%;
+    border-top: 1px solid var(--color-grey-100);
+    margin: var(--separator-margin);
+}
+
+.separator--vert {
+    height: 10px;
+    display: inline-flex;
+    border-left: 2px solid var(--color-grey-100);
+    margin: 0px 0.6rem;
+}
+
+.skill-list {
+    font-size: var(--font-sm);
+}
+
+.skill-list--center {
+    text-align: center;
+}
+
+.skill-list__item {
+    display: inline-block;
+    border: 1px solid var(--color-blue-500);
+    color: var(--color-blue-500);
+    border-radius: 3px;
+    padding: 0 0.3rem;
+    margin: 0.2rem;
+}
+
+.skill-list__item--grey {
+    border-color: var(--color-grey-500);
+    color: var(--color-grey-500);
+}
+
+.skill-list__item--block {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+}
+
+.list:not(:last-child) {
     margin-bottom: 40px;
 }
 
-.details .section:last-of-type {
-    margin-bottom: 0px;
+.list__section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--section-margin);
 }
 
-.details .section__title {
-    letter-spacing: 2px;
-    color: #54afe4;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.details .section__list-item {
-    margin-bottom: 40px;
-}
-
-.details .section__list-item:last-of-type {
+.list__section :last-child {
     margin-bottom: 0;
 }
 
-.details .left,
-.details .right {
-    vertical-align: top;
-    display: inline-block;
+.list__section--col {
+    flex-direction: column;
 }
 
-.details .left {
-    width: 60%;
+.list__section-header {
+    margin-bottom: var(--paragraph-margin);
 }
 
-.details .right {
-    text-align: right;
-    width: 39%;
+.rating {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
 }
 
-.details .name {
-    font-weight: bold;
-}
-
-.details a {
-    text-decoration: none;
-    color: #000;
-    font-style: italic;
-}
-
-.details a:hover {
-    text-decoration: underline;
-    color: #000;
-}
-
-.details .skills {
-}
-
-.details .skills__item {
-    margin-bottom: 10px;
-}
-
-.details .skills__item .right input {
-    display: none;
-}
-
-.details .skills__item .right label {
+.rating__point {
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: #c3def3;
-    border-radius: 20px;
-    margin-right: 3px;
+    background: var(--color-blue-100);
+    border-radius: 50%;
 }
 
-.details .skills__item .right input:checked + label {
-    background: #79a9ce;
+.rating__point:not(:last-of-type) {
+    margin-right: 0.6rem;
+}
+
+.rating__point--filled {
+    background: var(--color-blue-500);
+}
+
+@media screen and (max-width: 750px) {
+    .main__header {
+        line-height: 1.2;
+    }
+
+    .contact__item {
+        display: block;
+    }
+
+    .rating__point {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+    }
+
+    .rating__point:not(:last-of-type) {
+        margin-right: 0.4rem;
+    }
+
+    .hide--sm {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: var(--font-sm);
+    }
 }

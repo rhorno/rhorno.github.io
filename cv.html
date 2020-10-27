@@ -1,158 +1,566 @@
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
-<link href='./cv.css' rel='stylesheet' type='text/css'>
+<!-- TODO:
+	* få allt att se bra ut i printläge/pdf
+	https://www.sitepoint.com/css-printer-friendly-pages/
+	* dela upp sektioner i olika pages för print/pdf
+	* logo på mail, tele, LI?
+ -->
+<!DOCTYPE html>
+<html lang="sv">
 
-<div class="container">
-  <div class="header">
-    <div class="full-name">
-      <span class="first-name">John</span>
-      <span class="last-name">Doe</span>
-    </div>
-    <div class="contact-info">
-      <span class="email">Email: </span>
-      <span class="email-val">john.doe@gmail.com</span>
-      <span class="separator"></span>
-      <span class="phone">Phone: </span>
-      <span class="phone-val">111-222-3333</span>
-    </div>
+<head>
+	<title>CV | Richard Hornö</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='./cv.css' rel='stylesheet' type='text/css'>
+</head>
 
-    <div class="about">
-      <span class="position">Front-End Developer </span>
-      <span class="desc">
-        I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.
-      </span>
-    </div>
-  </div>
-   <div class="details">
-    <div class="section">
-      <div class="section__title">Experience</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">KlowdBox</div>
-            <div class="addr">San Fr, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-                <div class="section__list-item">
-          <div class="left">
-            <div class="name">Akount</div>
-            <div class="addr">San Monica, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
+<body>
+	<main>
+		<article>
+			<header>
+				<h1 class="main__header">RICHARD HORNÖ
+					<span class="font-light">frontendutvecklare</span>
+				</h1>
+			</header>
+			<div>
+				<div class="contact__item">
+					<span class="text-grey font-light">email:</span>
+					<a href="mailto:rhorno@pm.me">rhorno@pm.me</a>
+				</div>
+				<span class="separator--vert hide--sm"></span>
+				<div class="contact__item">
+					<span class="text-grey font-light">mobil:</span>
+					<a href="tel:+46704222899">0704 222 899</a>
+				</div>
+				<span class="separator--vert hide--sm"></span>
+				<div class="contact__item">
+					<span class="text-grey font-light">linkedin:</span>
+					<a href="http://linkedin.com/in/richardhorno">linkedin.com/in/richardhorno</a>
+				</div>
+			</div>
 
-      </div>
-    </div>
-    <div class="section">
-      <div class="section__title">Education</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">Sample Institute of technology</div>
-            <div class="addr">San Fr, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">Akount</div>
-            <div class="addr">San Monica, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
+			<div class="separator"></div>
+			<div class="about">
+				<div class="about__profile-image">
+					<img src="profile.jpg" alt="profilbild" />
+				</div>
+				<ul class="font-sm">
+					<li>Javascript/ES6</li>
+					<li>React</li>
+					<li>Angular</li>
+					<li>HTML5</li>
+					<li>CSS3</li>
+					<li>Node.js</li>
+					<li>Typescript</li>
+					<li>Git</li>
+				</ul>
+			</div>
+			<div>
+				<p>
+					Min roll är systemutvecklare med starka kunskaper inom webbutveckling
+					och fokus på frontendutveckling. Min passion har alltid varit datorer och
+					att skapa saker, därför passar systemutveckling mig som handen i
+					handsken.
+				<p>
+					Under mina år som utvecklare har jag lärt mig att vara steget
+					före kan vara skillnaden mellan att lyckas och misslyckas. För mig är det
+					viktigt att omge mig av både människor runt omkring en men även
+					digitalt med olika perspektiv och erfarenheter av allt från kod till kunskap
+					utanför jobblivet. Jag tror att en grupp alltid når mer framgång än en
+					ensam person.
+				</p>
+				<p>
+					Med flera år som elithandbollsspelare har laganda alltid varit något jag
+					brunnit för och jag tycker det är viktigt att gruppen lyckas. Beskriver mig själv
+					som hjälpsam, prestigelös och öppen för förslag och förbättringar. På
+					fritiden ägnas mycket av min tid till idrott som fotboll, padel, golf och
+					gym. Resterande tid spenderas oftast med familj och vänner.
+				</p>
+			</div>
+		</article>
+		<div class="separator"></div>
+		<article>
+			<header>
+				<h2>ANSTÄLLNINGAR</h2>
+			</header>
+			<div class="list">
+				<section class="list__section">
+					<div>
+						<div>Webbutvecklare</div>
+						<div class="font-sm">Jan 2020 - pågående</div>
+					</div>
+					<header>
+						<h3>Forefront Consulting</h3>
+					</header>
+				</section>
+				<section class="list__section">
+					<div>
+						<div>Webbutvecklare</div>
+						<div class="font-sm">Okt 2016 - Jan 2020</div>
+					</div>
+					<header>
+						<h3>Frost Experience</h3>
+					</header>
+				</section>
+			</div>
+		</article>
+		<div class="separator"></div>
+		<article class="section">
+			<header>
+				<h2>TEKNIKER</h2>
+			</header>
+			<div class="list">
+				<div class="list__section">
+					<ul class="skill-list">
+						<li class="skill-list__item skill-list__item--grey">Javascript ES5/ES6</li>
+						<li class="skill-list__item skill-list__item--grey">React</li>
+						<li class="skill-list__item skill-list__item--grey">HTML5</li>
+						<li class="skill-list__item skill-list__item--grey">CSS3</li>
+					</ul>
+					<div class="rating">
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point--filled"></span>
+					</div>
+				</div>
+				<div class="list__section">
+					<ul class="skill-list">
+						<li class="skill-list__item skill-list__item--grey">Angular</li>
+						<li class="skill-list__item skill-list__item--grey">SASS/Less</li>
+						<li class="skill-list__item skill-list__item--grey">Node.js</li>
+						<li class="skill-list__item skill-list__item--grey">Redux</li>
+						<li class="skill-list__item skill-list__item--grey">MobX</li>
+						<li class="skill-list__item skill-list__item--grey">Typescript</li>
+						<li class="skill-list__item skill-list__item--grey">React Hooks</li>
+						<li class="skill-list__item skill-list__item--grey">CI/CD</li>
+						<li class="skill-list__item skill-list__item--grey">Git</li>
+						<li class="skill-list__item skill-list__item--grey">Agila metoder</li>
+						<li class="skill-list__item skill-list__item--grey">TDD</li>
+						<li class="skill-list__item skill-list__item--grey">npm</li>
+						<li class="skill-list__item skill-list__item--grey">Webpack</li>
+					</ul>
+					<div class="rating">
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point"></span>
+					</div>
+				</div>
+				<div class="list__section">
+					<ul class="skill-list">
+						<li class="skill-list__item skill-list__item--grey">React Native</li>
+						<li class="skill-list__item skill-list__item--grey">yarn</li>
+						<li class="skill-list__item skill-list__item--grey">Linux</li>
+						<li class="skill-list__item skill-list__item--grey">Episerver</li>
+						<li class="skill-list__item skill-list__item--grey">MongoDB</li>
+						<li class="skill-list__item skill-list__item--grey">Next.js</li>
+						<li class="skill-list__item skill-list__item--grey">Gulp</li>
+						<li class="skill-list__item skill-list__item--grey">Bootstrap</li>
+						<li class="skill-list__item skill-list__item--grey">Microservices</li>
+						<li class="skill-list__item skill-list__item--grey">MVC</li>
+						<li class="skill-list__item skill-list__item--grey">Jenkins CI</li>
+						<li class="skill-list__item skill-list__item--grey">jQuery</li>
+						<li class="skill-list__item skill-list__item--grey">Ant Design</li>
+						<li class="skill-list__item skill-list__item--grey">Angular 1</li>
+						<li class="skill-list__item skill-list__item--grey">Azure Devops</li>
+						<li class="skill-list__item skill-list__item--grey">GraphQL</li>
+					</ul>
+					<div class="rating">
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point"></span>
+						<span class="rating__point rating__point"></span>
+					</div>
+				</div>
+				<div class="list__section">
+					<ul class="skill-list">
+						<li class="skill-list__item skill-list__item--grey">PHP</li>
+						<li class="skill-list__item skill-list__item--grey">Apache</li>
+						<li class="skill-list__item skill-list__item--grey">NATS</li>
+						<li class="skill-list__item skill-list__item--grey">Ionic</li>
+						<li class="skill-list__item skill-list__item--grey">Power BI</li>
+					</ul>
+					<div class="rating">
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point--filled"></span>
+						<span class="rating__point rating__point"></span>
+						<span class="rating__point rating__point"></span>
+						<span class="rating__point rating__point"></span>
+					</div>
+				</div>
+			</div>
+		</article>
+		<div class="separator"></div>
+		<article>
+			<header>
+				<h2>UPPDRAG SOM KONSULT</h2>
+			</header>
+			<div class="list">
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Svenskt Näringsliv
+						</h3>
+						<span class="font-sm">Frontendutvecklare, sep 2020 - pågående</span>
+					</header>
+					<p>Frontendansvarig över förvaltning och nyutveckling av Svenskt
+						Näringslivs nyreleasade(sep -20) publika sidor, svensktnaringsliv.se och
+						arbetsmarknadsnytt.se.</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">React</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">Redux</li>
+						<li class="skill-list__item">SASS</li>
+						<li class="skill-list__item">Azure Devops</li>
+						<li class="skill-list__item">GraphQL</li>
+						<li class="skill-list__item">yarn</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Biometria
+						</h3>
+						<span class="font-sm">Frontendutvecklare, sep 2020 - pågående</span>
+					</header>
+					<p>Ansvarig över en rapportportals frontend inom ett nystartat projekt med
+						höga förväntningar.
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">Angular</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">Typescript</li>
+						<li class="skill-list__item">SASS</li>
+						<li class="skill-list__item">Azure Devops</li>
+						<li class="skill-list__item">Power BI</li>
+						<li class="skill-list__item">npm</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Previa
+						</h3>
+						<span class="font-sm">Frontendutvecklare, apr 2020 - jul 2020</span>
+					</header>
+					<p>Modernisering och refaktorering av en äldre admin design till nytt.
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">Angular</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">Typescript</li>
+						<li class="skill-list__item">SASS</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Bonava
+						</h3>
+						<span class="font-sm">Frontendutvecklare, feb 2020 - apr 2020</span>
+					</header>
+					<p>Utveckling utifrån ny UX av Bonavas "hitta ditt hem" funktion. Skrev även
+						en utförlig dokumentation av hela Bonavas frontendstruktur och tredje part
+						skripts.
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">React</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">SASS</li>
+						<li class="skill-list__item">Episerver</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Manpower
+						</h3>
+						<span class="font-sm">Frontendutvecklare, jan 2020 - feb 2020</span>
+					</header>
+					<p>Utveckling av ny UX och design för Manpowers interna konsultnätverk.
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">Javascript</li>
+						<li class="skill-list__item">MVC</li>
+						<li class="skill-list__item">Episerver</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">SASS</li>
+						<li class="skill-list__item">jQuery</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Frost Experience
+						</h3>
+						<span class="font-sm">Fullstackutvecklare, sep 2019 - dec 2019</span>
+					</header>
+					<p>Utveckling av Flamingo Studio, Frost egna online litteratur CMS. Ett CMS för
+						att kunna skapa böcker med text, bild, video och övningar. Ansvar för
+						Övningsmästaren, en MVP där användaren kan läsa och göra övningar som
+						förläggare har skapat i CMS systemet.
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">Node.js</li>
+						<li class="skill-list__item">Microservices</li>
+						<li class="skill-list__item">React</li>
+						<li class="skill-list__item">Redux</li>
+						<li class="skill-list__item">MongoDB</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">TDD</li>
+						<li class="skill-list__item">npm</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Pedagogpoolen
+						</h3>
+						<span class="font-sm">Frontendutvecklare, aug 2018 - sep 2019</span>
+					</header>
+					<p>Ansvarade för att sätta upp ett React Native projekt och en React webbapp
+						för att digitalisera Pedagogpoolen, ett företag som jobbar med att para
+						ihop sina egna vikarier till skolor. Första tiden ägnades åt att bygga upp
+						grunden till mobilapparna för att sedan lämna över utveckling till ett annat
+						team. Resten av tiden utvecklades webbappen, ett adminsystem för
+						skolorna där de kan hålla koll på fakturor, tidrapporter, söka och acceptera
+						uppdrag till vikarier.
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">React</li>
+						<li class="skill-list__item">React Native</li>
+						<li class="skill-list__item">MobX</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">SASS</li>
+						<li class="skill-list__item">npm</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>InexOne
+						</h3>
+						<span class="font-sm">Frontendutvecklare, jun 2019 - jul 2019</span>
+					</header>
+					<p>Nyutvecklade och implementerade ny design på en fintech
+						startup app, en aggregator för företag och expertnätverk.
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">React</li>
+						<li class="skill-list__item">Redux</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">Ant design</li>
+						<li class="skill-list__item">npm</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Agada
+						</h3>
+						<span class="font-sm">Frontendutvecklare, jul 2017 - dec 2018</span>
+					</header>
+					<p>Jobbade med ett team på 3 personer för Agada, ett digitalt psykiatriverktyg
+						för psykiatriker och deras klienter. Första fasen var att migrera det äldre
+						system från Angular 1 till Angular
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">Angular</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">Typescript</li>
+						<li class="skill-list__item">SASS</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Refunder
+						</h3>
+						<span class="font-sm">Frontendutvecklare, apr 2018 - jun 2018</span>
+					</header>
+					<p>Ansvarade för förvaltning och nyutveckling av Refunder, en
+						cashback mobilapp.
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">Angular</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">Typescript</li>
+						<li class="skill-list__item">SASS</li>
+						<li class="skill-list__item">Ionic</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Ellevio
+						</h3>
+						<span class="font-sm">Frontendutvecklare, jan 2018 - jun 2018</span>
+					</header>
+					<p>Ansvarade och utvecklade första versionen av ett adminsystem som
+						digitaliserade Ellevios hantering av elektrikers säkerhet ute på fält.
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">React</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">Redux</li>
+						<li class="skill-list__item">SASS</li>
+						<li class="skill-list__item">Google Maps API</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>One Planet Rating
+						</h3>
+						<span class="font-sm">Frontendutvecklare, dec 2017 - mar 2018</span>
+					</header>
+					<p>Startade upp och utvecklade första versionen av en mobilapp byggd i React
+						Native för One Planet Rating, en rating app inriktad på klimat, miljö och
+						hållbarhet
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">React Native</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">Redux</li>
+						<li class="skill-list__item">SASS</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Sanoma Utbildning
+						</h3>
+						<span class="font-sm">Frontendutvecklare, nov 2016 - dec 2017</span>
+					</header>
+					<p>Jobbade i ett team på 6 personer med fortsatt utveckling av en e-learning
+						plattform med skolor som målgrupp. Ansvarade för nyutveckling av ett
+						adminsystem till plattformen för att kunna hantera avnändare och licenser
+						till produkter. Underhöll ett äldre adminsystem för att skapa och ändra på
+						licenser.
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">Angular 1+2</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">Typescript</li>
+						<li class="skill-list__item">SASS</li>
+						<li class="skill-list__item">Bootstrap</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Horseflow
+						</h3>
+						<span class="font-sm">Frontendutvecklare, jul 2017 - aug 2020</span>
+					</header>
+					<p>Ansvarade för att starta upp en webbapp för Horseflow, en social media
+						app för hästägare och entusiaster.
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">React</li>
+						<li class="skill-list__item">React Native</li>
+						<li class="skill-list__item">HTML5</li>
+						<li class="skill-list__item">Redux</li>
+						<li class="skill-list__item">SASS</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Frost Experience
+						</h3>
+						<span class="font-sm">Backendutvecklare, apr 2017</span>
+					</header>
+					<p>Utvecklade en log service samt underhöll andra services för Frost egna
+						microservice plattform.
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript</li>
+						<li class="skill-list__item">Node.js</li>
+						<li class="skill-list__item">NATS</li>
+						<li class="skill-list__item">Microservices</li>
+						<li class="skill-list__item">TDD</li>
+					</ul>
+				</section>
+				<section class="list__section list__section--col">
+					<header class="list__section-header">
+						<h3>Vertige
+						</h3>
+						<span class="font-sm">Fullstackutvecklare, mar 2016 - okt 2016</span>
+					</header>
+					<p>Utvecklade, underhöll och ansvarade över ett system för en e-commercesida.
+						Konfigurerade Apache webbserver, implementerade betallösning och
+						utvecklade en webbsida.
 
-      </div>
+					</p>
+					<ul class="skill-list">
+						<li class="skill-list__item">JavaScript ES5</li>
+						<li class="skill-list__item">PHP</li>
+						<li class="skill-list__item">Apache</li>
+						<li class="skill-list__item">Linux</li>
+						<li class="skill-list__item">HTML</li>
+						<li class="skill-list__item">CSS</li>
+					</ul>
+				</section>
+			</div>
+		</article>
+		<div class="separator"></div>
+		<article>
+			<header>
+				<h2>SPRÅK</h2>
+			</header>
+			<div class="list">
+				<div class="list__section">
+					<span class="font-bold">Modersmål</span>
+					<span>Svenska</span>
+				</div>
+				<div class="list__section">
+					<span class="font-bold">Goda kunskaper</span>
+					<span>Engelska</span>
+				</div>
+			</div>
+		</article>
+		<div class="separator"></div>
+		<article>
+			<header>
+				<h2>UTBILDNING</h2>
+			</header>
+			<div class="list">
+				<section class="list__section">
+					<header>
+						<h3>Webbutveckling</h3>
+						<div class="font-sm">2014 - 2016</div>
+					</header>
+					<div>
+						<div>Jensen Education</div>
+						<div class="font-sm">Stockholm</div>
+					</div>
+				</section>
+			</div>
+		</article>
+		<div class="separator"></div>
+		<article>
+			<header>
+				<h2>
+					INTRESSEN
+				</h2>
+			</header>
+			<ul class="skill-list skill-list--center">
+				<li class="skill-list__item skill-list__item--grey">Fotboll</li>
+				<li class="skill-list__item skill-list__item--grey">Programmering</li>
+				<li class="skill-list__item skill-list__item--grey">Golf</li>
+				<li class="skill-list__item skill-list__item--grey">Mat/Kost</li>
+				<li class="skill-list__item skill-list__item--grey">Padel</li>
+				<li class="skill-list__item skill-list__item--grey">Träning</li>
+				<li class="skill-list__item skill-list__item--grey">Linux</li>
+				<li class="skill-list__item skill-list__item--grey">Handboll</li>
+				<li class="skill-list__item skill-list__item--grey">NFL</li>
+			</ul>
+		</article>
+	</main>
+</body>
 
-  </div>
-     <div class="section">
-      <div class="section__title">Projects</div>
-       <div class="section__list">
-         <div class="section__list-item">
-           <div class="name">DSP</div>
-           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
-         </div>
-
-         <div class="section__list-item">
-                    <div class="name">DSP</div>
-           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
-           </div>
-         </div>
-       </div>
-    </div>
-     <div class="section">
-       <div class="section__title">Skills</div>
-       <div class="skills">
-         <div class="skills__item">
-           <div class="left"><div class="name">
-             Javascript
-             </div></div>
-           <div class="right">
-                          <input  id="ck1" type="checkbox" checked/>
-
-             <label for="ck1"></label>
-                          <input id="ck2" type="checkbox" checked/>
-
-              <label for="ck2"></label>
-                         <input id="ck3" type="checkbox" />
-
-              <label for="ck3"></label>
-                           <input id="ck4" type="checkbox" />
-            <label for="ck4"></label>
-                          <input id="ck5" type="checkbox" />
-              <label for="ck5"></label>
-
-           </div>
-         </div>
-
-       </div>
-       <div class="skills__item">
-           <div class="left"><div class="name">
-             CSS</div></div>
-           <div class="right">
-                          <input  id="ck1" type="checkbox" checked/>
-
-             <label for="ck1"></label>
-                          <input id="ck2" type="checkbox" checked/>
-
-              <label for="ck2"></label>
-                         <input id="ck3" type="checkbox" />
-
-              <label for="ck3"></label>
-                           <input id="ck4" type="checkbox" />
-            <label for="ck4"></label>
-                          <input id="ck5" type="checkbox" />
-              <label for="ck5"></label>
-
-           </div>
-         </div>
-
-       </div>
-     <div class="section">
-     <div class="section__title">
-       Interests
-       </div>
-       <div class="section__list">
-         <div class="section__list-item">
-                  Football, programming.
-          </div>
-       </div>
-     </div>
-     </div>
-  </div>
-</div>
+</html>
