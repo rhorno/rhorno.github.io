@@ -247,3 +247,13 @@ main {
         height: 130px;
     }
 }
+
+.page-break {
+    break-before: page;
+}
+
+@media print {
+    .print-hide {
+        display: none;
+    }
+}
