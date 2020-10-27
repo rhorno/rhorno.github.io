@@ -241,4 +241,9 @@ main {
     html {
         font-size: var(--font-sm);
     }
+
+    .about__profile-image {
+        width: 130px;
+        height: 130px;
+    }
 }
