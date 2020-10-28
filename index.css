@@ -16,6 +16,8 @@
     --paragraph-margin: 0.7rem;
     --section-margin: 2.2rem;
     --separator-margin: 2.4rem 0;
+    --rating-radius: 30;
+    --PI: 3.1415;
 }
 
 * {
@@ -80,7 +82,14 @@ main {
 }
 
 .contact__item {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+}
+
+.contact__item-image {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.4rem;
 }
 
 .about {
@@ -135,7 +144,7 @@ main {
 }
 
 .separator--vert {
-    height: 10px;
+    height: 20px;
     display: inline-flex;
     border-left: 2px solid var(--color-grey-100);
     margin: 0px 0.6rem;
@@ -183,6 +192,10 @@ main {
     margin-bottom: 0;
 }
 
+.list__section--align-center {
+    align-items: center;
+}
+
 .list__section--col {
     flex-direction: column;
 }
@@ -193,25 +206,45 @@ main {
 
 .rating {
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin-left: 2rem;
 }
 
-.rating__point {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--color-blue-500);
-    border-radius: 50%;
+.rating__text {
+    font-size: 1.4rem;
+    fill: var(--color-blue-300);
 }
 
-.rating__point:not(:last-of-type) {
-    margin-right: 0.6rem;
+.rating__circle {
+    stroke: var(--color-grey-100);
+    fill: transparent;
+    stroke-width: 10;
 }
 
-.rating__point--filled {
-    background: var(--color-blue-500);
-    border: 0;
+.rating__circle--filled {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke: var(--color-blue-500);
+    stroke-dasharray: calc(var(--rating-radius) * 2 * var(--PI))
+        calc(var(--rating-radius) * 2 * var(--PI));
+}
+
+.rating__circle--75 {
+    stroke-dashoffset: calc(
+        25 / 100 * calc(var(--rating-radius) * 2 * var(--PI))
+    );
+}
+
+.rating__circle--50 {
+    stroke-dashoffset: calc(
+        50 / 100 * calc(var(--rating-radius) * 2 * var(--PI))
+    );
+}
+
+.rating__circle--25 {
+    stroke-dashoffset: calc(
+        75 / 100 * calc(var(--rating-radius) * 2 * var(--PI))
+    );
 }
 
 @media screen and (max-width: 750px) {
@@ -220,17 +253,7 @@ main {
     }
 
     .contact__item {
-        display: block;
-    }
-
-    .rating__point {
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-    }
-
-    .rating__point:not(:last-of-type) {
-        margin-right: 0.4rem;
+        display: flex;
     }
 
     .hide--sm {
