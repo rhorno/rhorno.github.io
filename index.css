@@ -81,15 +81,15 @@ main {
     padding: 2.3rem;
 }
 
-.contact__item {
-    display: inline-flex;
+.pdf-container {
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.contact__item-image {
-    width: 20px;
-    height: 20px;
-    margin-right: 0.4rem;
+.contact__item {
+    display: inline-flex;
+    align-items: center;
 }
 
 .about {
@@ -148,6 +148,17 @@ main {
     display: inline-flex;
     border-left: 2px solid var(--color-grey-100);
     margin: 0px 0.6rem;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.4rem;
+}
+
+.icon--margin-left {
+    margin-right: 0;
+    margin-left: 0.4rem;
 }
 
 .skill-list {
