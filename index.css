@@ -241,13 +241,13 @@ main {
     calc(var(--rating-radius) * 2 * var(--PI));
 }
 
-.rating__circle--75 {
+.rating__circle--80 {
   stroke-dashoffset: calc(
     20 / 100 * calc(var(--rating-radius) * 2 * var(--PI))
   );
 }
 
-.rating__circle--50 {
+.rating__circle--60 {
   stroke-dashoffset: calc(
     40 / 100 * calc(var(--rating-radius) * 2 * var(--PI))
   );
