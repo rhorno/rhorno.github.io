@@ -14,7 +14,7 @@
   --font-light: 300;
   --container-width: 750px;
   --paragraph-margin: 0.7rem;
-  --section-margin: 2.2rem;
+  --section-margin: 2.4rem;
   --separator-margin: 2.4rem 0;
   --rating-radius: 30;
   --PI: 3.1415;
@@ -82,7 +82,12 @@ main {
   padding: 2.3rem;
 }
 
-.pdf-container {
+.employer-container {
+  flex: 1;
+  margin-right: var(--section-margin);
+}
+
+.misc-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
