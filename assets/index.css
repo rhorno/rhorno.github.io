@@ -7,15 +7,16 @@
   --color-blue-100: #c8dff1;
   --color-blue-300: #79a9ce;
   --color-blue-500: #2fa3e6;
-  --font: 400 17px/1.6 'Lato', sans-serif;
+  --font: 400 17px/1.6 "Lato", sans-serif;
   --font-sm: 0.85rem;
-  --font-lg: 2rem;
+  --font-md: 1.2rem;
+  --font-lg: 1.8rem;
   --font-bold: 700;
   --font-light: 300;
   --container-width: 750px;
   --paragraph-margin: 0.7rem;
   --section-margin: 2.6rem;
-  --separator-margin: 2.6rem 0;
+  --separator-margin: 1.5rem 0;
   --rating-radius: 30;
   --PI: 3.1415;
   --profile-image-size: 190px;
@@ -39,7 +40,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: var(--font-bold);
   font-size: 1rem;
 }
@@ -49,13 +51,20 @@ h2 {
   letter-spacing: 1.3px;
 }
 
-h1 {
+h1,
+h2 {
   font-size: var(--font-lg);
 }
 
 h2 {
   color: var(--color-blue-500);
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+h3 {
+  color: var(--color-blue-500);
+  font-weight: 400;
+  font-size: var(--font-md);
 }
 
 ul {
@@ -79,12 +88,14 @@ main {
   max-width: var(--container-width);
   background: var(--color-white);
   margin: 0 auto;
-  padding: 2.7rem;
+  padding: 2rem;
 }
 
 .employer-container {
-  flex: 1;
-  margin-right: var(--section-margin);
+  display: grid;
+  border-left: 1px solid var(--color-grey-100);
+  padding-left: 1rem;
+  margin-top: 1rem;
 }
 
 .misc-container {
@@ -134,6 +145,10 @@ main {
   font-size: var(--font-sm);
 }
 
+.font-i {
+  font-style: italic;
+}
+
 .text-grey {
   color: var(--color-grey-500);
 }
@@ -147,6 +162,11 @@ main {
   width: 100%;
   border-top: 1px solid var(--color-grey-100);
   margin: var(--separator-margin);
+}
+
+.separator--sm {
+  width: 20%;
+  margin: 1rem 0;
 }
 
 .separator--vert {
@@ -169,6 +189,7 @@ main {
 
 .skill-list {
   font-size: var(--font-sm);
+  gap: 0.6rem;
 }
 
 .skill-list--center {
@@ -177,11 +198,10 @@ main {
 
 .skill-list__item {
   display: inline-block;
-  border: 2px solid var(--color-grey-100);
+  border: 1px solid var(--color-grey-500);
   color: var(--color-black);
   border-radius: 3px;
-  padding: 0 0.5rem;
-  margin: 0.2rem;
+  padding: 0 0.2rem;
 }
 
 .skill-list__item--blue {
@@ -200,12 +220,10 @@ main {
 }
 
 .list__section {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: var(--section-margin);
 }
 
-.list__section :last-child {
+.list__section:last-of-type {
   margin-bottom: 0;
 }
 
